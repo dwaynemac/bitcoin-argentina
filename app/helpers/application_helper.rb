@@ -14,6 +14,6 @@ module ApplicationHelper
   end
 
   def tweet_button
-    %[<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-lang="es">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>].html_safe
+    %[<a href="http://twitter.com/share" class="twitter-share-button" data-via="bitcoinar" data-count="horizontal" data-lang="es">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>].html_safe
   end
 end
