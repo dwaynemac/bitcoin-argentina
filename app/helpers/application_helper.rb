@@ -16,4 +16,9 @@ module ApplicationHelper
   def tweet_button
     %[<a href="http://twitter.com/share" class="twitter-share-button" data-via="bitcoinar" data-count="horizontal" data-lang="es">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>].html_safe
   end
+
+  def facebook_comments
+    site_url = "http://www.bitcoin-argentina.com.ar"
+    %{<div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:comments href="#{site_url}#{request.request_uri}" num_posts="2" width="500"></fb:comments>}.html_safe
+  end
 end
