@@ -12,5 +12,15 @@
   </p>
 </section>
 <section id='side_body_content'>
+  <span id="dinamic_text"></span>
+  <script language="javascript">
+    $(document).ready(function(){
+        var value;
+        $.getJSON("http://bitcoincharts.com/t/weighted_prices.json",function(data){
+            value = data["USD"]["24h"]
+        });
+        $("#dinamic_text").html(value);
+    });
+  </script>
   <%=raw @page[:side_body] %>
 </section>
