@@ -12,15 +12,10 @@
   </p>
 </section>
 <section id='side_body_content'>
-  <span id="dinamic_text"></span>
-  <script language="javascript">
-    $(document).ready(function(){
-        var value;
-        $.getJSON("http://bitcoincharts.com/t/weighted_prices.json",function(data){
-            value = data["USD"]["24h"]
-        });
-        $("#dinamic_text").html(value);
-    });
-  </script>
+  1 BTC = <%= number_with_precision @btc_ars, :precision => 2 %> ARS <br>
+  <span style="font-size:0.75em;">
+  Fuente: <%= link_to 'Bitcoin Charts USD 24hs', "http://bitcoincharts.com/markets/", :target => "_blank" %> -
+  <%= link_to 'Google USD', "http://www.google.com/finance/converter?a=1&from=USD&to=ARS", :target => "_blank" %>
+  </span>
   <%=raw @page[:side_body] %>
 </section>

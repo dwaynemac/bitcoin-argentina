@@ -45,12 +45,12 @@ end
 # END REFINERY CMS ============================================================
 
 # USER DEFINED
-
+gem 'typhoeus'
 
 # Specify additional Refinery CMS Engines here (all optional):
 # gem 'refinerycms-inquiries',    '~> 1.0'
 # gem "refinerycms-news",         '~> 1.2'
-# gem 'refinerycms-blog',         '~> 1.6'
+gem 'refinerycms-blog',         '~> 1.6'
 # gem 'refinerycms-page-images',  '~> 1.0'
 
 # Add i18n support (optional, you can remove this if you really want to).
